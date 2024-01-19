@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Portafolio" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css">
+    <link rel="stylesheet" href="https://unpkg.com/primeflex/themes/saga-blue.css">
+    <script src="https://kit.fontawesome.com/b3f17f1dac.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="flex w-full fixed top-0 z-1">
+        <nav class="flex justify-content-between w-full navbar">
+            <span class="logo cursor-pointer" onclick="scrollToSection('home')">
+                <img src="./Archivos/Logo.png" alt="Logo portafolio" width="20" height="10">
+            </span>
+            <input type="checkbox" aria-label="Checkbox para mostrar y quitar hamburger menu"
+                class="checkbox xl:hidden">
+            <div class="hamburger__lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <div class="header__info flex align-items-center gap-3">
+                <ul class="flex flex-column xl:flex-row list-none">
+                    <li onclick="scrollToSection('about')">Sobre mí</li>
+                    <li onclick="scrollToSection('services')">Servicios</li>
+                    <li onclick="scrollToSection('portfolio')">Portafolio</li>
+                    <li onclick="scrollToSection('contact')">Contacto</li>
+                </ul>
+                
+            </div>
+        </nav>
+    </header>
+    <!--HOME PAGE -->
+    <div class="container">
+        <section id="home"
+            class="home__page flex align-items-center justify-content-center xl\:justify-content-between grid grid-nogutter gap-4">
+            <div class="left__content col-12 xl:col-6">
+                <div class="message__bubble triangle mb-4 md:mb-2">
+                    <div class="message__text p-2 sm:p-3 text-center">
+                        <p>Hola, Yo soy</p>
+                    </div>
+                </div>
+                <h1 class="text-3xl sm:text-5xl md:text-7xl">Alexandra Peña</h1>
+                <p class="text-gray-500">
+                    Desarrollador frontEnd
+                </p>
+                <div class="home__buttons flex align-items-center gap-2 mt-6">
+                    <a href="./Archivos/CURRICULUM.pdf" aria-label="Descargar curriculum" target="blank"
+                        class="cursor-pointer border-round-lg no-underline" download>Descargar CV</a>
+                    <button onclick="scrollToSection('portfolio')" aria-label="Deslizar a sección portafolio para mostrar mis trabajos"
+                        class="cursor-pointer border-round-lg">Mi trabajo</button>
+                </div>
+            </div>
+            <div class="right__content col-9 sm:col-6 xl:col-5">
+                <img src="./Archivos/foto-perfil.png" alt="Foto perfil" width="100" height="100">
+            </div>
+        </section>
+        <!--ABOUT ME-->
+        <section id="about" class="about__me w-full min-h-screen flex align-items-center">
+            <div class="aboutMe__content min-h-full flex flex-column md:flex-row pt-8 md:pt-0">
+                <div class="aboutMe__info col-12 md:col-6 md:pr-6 pt-0">
+                    <h1 class="text-3xl md:text-5xl">Sobre mí</h1>
+                    <p class="text-gray-500">
+                    Soy estudiante de noveno semestre de Ingeniería de Sistemas, lo que me ha proporcionado una sólida base de conocimientos en diversos aspectos de la informática. Mi enfoque se centra especialmente en el desarrollo web, donde he adquirido experiencia significativa en la creación de interfaces atractivas y funcionales.
+                    Mis habilidades incluyen el manejo avanzado de tecnologías clave como CSS, JavaScript, React y Angular. A través de proyectos y prácticas, he desarrollado la capacidad de diseñar y construir soluciones web innovadoras y eficientes                    </p>
+                    </p>
+                    <div class="knowledge flex flex-column gap-3 mt-5">
+                        <p>Wordpress 100%</p>
+                        <div class="progress__bar progress__wordpress">
+                            <span></span>
+                        </div>
+                        <p>JavaScript 75%</p>
+                        <div class="progress__bar progress__html">
+                            <span></span>
+                        </div>
+                        <p>Angular 80%</p>
+                        <div class="progress__bar progress__angular">
+                            <span></span>
+                        </div>
+                        <p>React Js 95%</p>
+                        <div class="progress__bar progress__reactJs">
+                            <span></span>
+                        </div>
+                        <p>HTML 95%</p>
+                        <div class="progress__bar progress__reactJs">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="hireMe__button pt-4">
+                        <a href="mailTo:alexandrapc1326@gmail.com" aria-label="Enviar mensaje al correo"
+                            class="cursor-pointer no-underline border-round-lg">Contratame</a>
+                    </div>
+
+                </div>
+                <div class="image col p-0 mt-6 md:mt-0">
+                    <img src="./Archivos/freelancer.jpg" alt="Foto Sobre mí" width="100" height="100">
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--FREE LANCER SECTION -->
+    <section class="freelancer mb-4 mt-4 min-w-full flex flex-column justify-content-center align-items-center">
+        <p class="text-sm">Tienes un proyecto en mente?</p>
+        <h1 class="text-center">Estoy disponible como desarrollador Web</h1>
+        <div class="hireMe__button pt-4">
+            <a href="mailTo:alexandrapc1326@gmail.com" aria-label="Enviar mensaje al correo"
+                class="cursor-pointer no-underline border-round-lg">Escríbeme</a>
+        </div>
+    </section>
+    <!--SERVICES -->
+    <div class="container">
+        <section id="services" class="services min-h-full w-full pb-7">
+            <div class="services__title flex flex-column gap-3 text-center">
+                <h1 class="text-3xl md:text-5xl">Mis servicios</h1>
+                <p class="text-gray-400 text-sm md:text-base">
+                    En mi apasionante viaje a través del mundo digital, me especializo en ofrecer soluciones innovadoras y a medida para catapultar tu presencia en línea. Mi conjunto de habilidades abarca la creación y gestión de bases de datos, con especial enfoque en la versatilidad de WordPress. Diseño experiencias web cautivadoras utilizando HTML y CSS, creando interfaces intuitivas y visualmente atractivas.
+                    Mi compromiso con el desarrollo web es evidente en la implementación ágil y efectiva de tecnologías punteras como Angular y React, que no solo potencian la funcionalidad sino que también garantizan una experiencia de usuario incomparable.
+                </p>
+            </div>
+            <div class="services__card w-full grid grid-nogutter mt-7 gap-5">
+                <div class="card flex align-items-center col-12 sm:col-6 lg:col-4 gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>HTML</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col lg:col-4 gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-brands fa-wordpress"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Wordpress</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col-6 md:col-3 lg:col gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-brands fa-angular"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Angular</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col md:col lg:col-4 gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>React Js</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col-6 md:col-4 lg:col-4 gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Base de Datos</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col md:col-4 lg:col gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Desarrollo web</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--PORTFOLIO -->
+        <section id="portfolio" class="portfolio min-h-full w-full pb-8 pt-8">
+            <div class="portfolio__title flex flex-column gap-3 text-center">
+                <h1 class="text-3xl md:text-5xl">Mi trabajo</h1>
+                <p class="text-gray-400 text-sm md:text-base">
+                    Bienvenido a mi mundo creativo y digital, donde la fusión de creatividad y funcionalidad da vida a 
+                    experiencias digitales excepcionales. Cada proyecto cuenta una historia única, desde la elegancia del 
+                    diseño hasta la potencia del desarrollo, reflejando mi compromiso con la excelencia y la atención al detalle. 
+                    Estás invitado a explorar este viaje digital, donde cada clic revela colaboraciones transformadoras y
+                     proyectos que van más allá de lo convencional.
+                </p>
+            </div>
+            <div class="portfolio__gallery">
+                <div class="gallery__categories mb-5 mt-5">
+                    <ul class="flex list-none flex-wrap justify-content-center gap-3">
+                        <li class="filter-item active" data-filter="all">Todos</li>
+                        <li class="filter-item " data-filter="Landing_Page">Landing Page</li>
+                        <li class="filter-item " data-filter="e-commerce">e-commerce</li>
+                        
+                    </ul>
+                </div>
+                <div class="proyect__gallery flex justify-content-center align-items-center flex-wrap gap-3">
+                    <div class="project__card Landing_Page">
+                        <img src="./Archivos/proyecto-1.png" alt="">
+                        <div class="overlay"></div>
+                        <div
+                            class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                            <h2>Landing Page</h2>
+                            <p>Es una página web estratégicamente diseñada con un propósito definido: convertir a los visitantes
+                                 en leads o clientes potenciales. 
+                            </p>
+                            <a href="https://github.com/Ale26pc/Landing_Page" target="blank">
+                                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__card Landing_Page">
+                        <img src="./Archivos/proyecto-2.png" alt="">
+                        <div class="overlay"></div>
+                        <div
+                            class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                            <h2>Hackaton</h2>
+                            <p>Landing realizada para Taxis libres para la hackaton. Evento que reúne personas apasionadas por la innovación para resolver desafíos de movilidad.
+                                Durante tres días.
+                            </p>
+                            <a href="https://hackatontaxislibres.netlify.app/" target="blank">
+                                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__card e-commerce">
+                        <img src="./Archivos/proyecto-3.png" alt="">
+                        <div class="overlay"></div>
+                        <div
+                            class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                            <h2>HERATOPE</h2>
+                            <p>Carrito de compras, intuitivo, con enfoque al usuario para tienda de perfumes on-line
+                            </p>
+                            <a href="https://github.com/Ale26pc/Heratope.git" target="blank">
+                                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--FOOTER -->
+        <footer id="contact" class="min-h-full w-full flex grid col-12 justify-content-center pb-8 pt-8 lg:text-center">
+            <div class="social__media col-12 md:col-4 flex flex-column justify-content-between">
+                <h3>Redes sociales</h3>
+                <p>Auténtica e innovadora</p>
+                <p>Desarrollo lo que necesitas, con un enfoque en usabilidad y rendimiento</p>
+                <div class="social__mediaIcons mt-5 flex lg:justify-content-center gap-3">
+                    <a href="https://www.facebook.com/profile.php?id=100069169830551&mibextid=LQQJ4d" target="_blank" aria-label="Ir a facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/alexa_26pc?igsh=MWs0Z2NrZ2w1MzJ5bA%3D%3D&utm_source=qr" target="_blank" aria-label="Ir a instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/alexandra-pe%C3%B1a-cera-45a00a245/" target="_blank" aria-label="Ir a linkedin">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contact col-12 sm:col-6 sm:pt-0 md:pt-2 md:col-4 flex flex-column justify-content-between md:align-items-center">
+                <h3>Contacto</h3>
+                <div class="phone__number flex align-items-center gap-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+57 3002403508</p>
+                </div>
+                <div class="email flex align-items-center gap-2">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>alexandrapc1326@gmail.com</p>
+                </div>
+                <a href="https://wa.me/+573002403508" target="_blank" 
+                    class="cursor-pointer text-center col-4 sm:col-6 xl:col-4 mt-3 no-underline border-round-lg">
+                    <span>
+                        <i class="fa-solid fa-message"></i>
+                    </span>Escríbeme
+                </a>
+            </div>
+            <div class="my__services col-12 sm:col-6 sm:p-0 md:col-4 md:pt-2 md:align-items-center flex flex-column justify-content-between">
+                <h3>Mis Servicios</h3>
+                <p>Desarrollo web</p>
+                <p>Gestión de proyectos</P>
+            </div>
+        </footer>
+    </div>
+
+</body>
+<script>
+    const filterContainer = document.querySelector(".gallery__categories");
+    const galleryItems = document.querySelectorAll(".project__card");
+
+    filterContainer.addEventListener("click", (event) => {
+        if (event.target.classList.contains("filter-item")) {
+            filterContainer.querySelector(".active").classList.remove("active");
+            event.target.classList.add("active")
+            const filterValue = event.target.getAttribute("data-filter")
+            galleryItems.forEach(item => {
+                if (item.classList.contains(filterValue) || filterValue === "all") {
+                    item.classList.remove("hide")
+                    item.classList.add("show")
+                } else {
+                    item.classList.remove("show")
+                    item.classList.add("hide")
+                }
+            })
+        }
+    })
+
+    function scrollToSection(sectionId){
+        document.getElementById(sectionId).scrollIntoView({behavior:"smooth"})
+    }
+</script>
+
+</html>
